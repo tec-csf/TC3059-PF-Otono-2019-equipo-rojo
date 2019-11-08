@@ -49,7 +49,6 @@ La solución propuesta para redis fue [Redis Labs](https://redislabs.com/)
 No hay cambios de ruptura
 
 # Ayuda
-@AlbertoPascal, beto_pascal@hotmail.com
 @antony999k, antony999k@hotmail.com
 
 # Referencias
