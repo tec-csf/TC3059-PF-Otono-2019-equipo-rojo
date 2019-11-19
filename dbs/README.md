@@ -1,7 +1,8 @@
 # Databases
 
 ## NEO4J Cluster
-Cluster Neo4j docker con Helm
+[Estrucura de la base de datos](./neo4j_doc.md)
+Este proyecto se ejecuta en un cluster de Neo4j docker con Helm
 
 ### Instalar Helm
 Hay dos partes en Helm: El cliente Helm (helm) y el servidor Helm (Tiller). Esta guía muestra cómo instalar el cliente
@@ -41,8 +42,6 @@ R: pueba los siguientes comandos eh intenta de nuevo (`helm reset`) y (`helm ini
 - ¿Cómo puedo probar si funciona la base de datos?
 R: usa (`kubectl port-forward neo4j-cluster-neo4j-core-1 7474:7474 7687:7687`) para probar en [localhost:8474](http://localhost:8474)
 
-### More Neo4j structure info
-[Neo4j structure](./neo4j_doc.md)
 
 ## REDIS
 
