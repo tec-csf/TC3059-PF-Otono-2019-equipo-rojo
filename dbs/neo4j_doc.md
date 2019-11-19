@@ -14,10 +14,27 @@
 - `:LIKES`
 - `:SHARED`
 
+### User
+    n:User{
+        id: Integer, (Unique)
+        username: String,
+        mail: String, (Unique)
+        password: String,
+        name: String,
+        location: String,
+        description: String,
+        verified: bool,
+        created_at: Date,
+        birthday: Date
+        lang: String,
+        profile_banner_url: String
+        profile_image_url: String,
+    }
+
 ## Ejemplos Querys
 Visita [db.cypher](./db.cypher) para ver los ejemplos del queries
 
-## Ejemplos Modelos
+## Ejemplos Relaciones
 ### Created
 `a:User1 -
 r:CREATED{
@@ -50,21 +67,4 @@ r:LIKES{
     id: Integer, (Unique)
     text: String
     created_at: String,
-}`
-
-### User
-`n:User{
-    id: Integer, (Unique)
-    username: String,
-    mail: String, (Unique)
-    password: String,
-    name: String,
-    location: String,
-    description: String,
-    verified: bool,
-    created_at: Date,
-    birthday: Date
-    lang: String,
-    profile_banner_url: String
-    profile_image_url: String,
 }`
