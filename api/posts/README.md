@@ -641,6 +641,16 @@ El campo **message** es personalizado y debe estar en ingles
 4. Es necesario contar con el archivo *.env*, este no se puede descargar via Github ya que contiene claves privadas (pedir al administrador del repositorio)
 5. Correr el servidor
 
+## Archivo *.env* (sin "")
+    PORT=<Puerto de la aplicación>
+
+    NEO4J_USER=<username *default:neo4j*>
+    NEO4J_PASSWORD=<password>
+
+    REDIS_HOST=<IP o dominio>
+    REDIS_PORT=<puerrto>
+    REDIS_PASSWORD=<redis password>
+
 ## Guía de estilos
 ### Mensajes en los Commits de Git
 
