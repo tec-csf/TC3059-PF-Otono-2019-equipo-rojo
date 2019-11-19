@@ -15,7 +15,7 @@ module.exports = (() => {
   //Obtiene todos los usuarios de la aplicacion (ADMIN ONLY)
   router.get('/users', userController.getUsers);
   //Obtiene un usuario
-  router.get('/user',  userController.getUser);
+  router.get('/user', userController.getUser);
   //Registra un usuario en la aplicación
   router.post('/user', userController.registerUser);
   //Logea a un usuario entregandole un token único
@@ -24,16 +24,16 @@ module.exports = (() => {
   router.post('/user/follow', authMiddleware.isAuth, userController.followUser);
   //Unfollow a un usuario
   router.delete('/user/follow', authMiddleware.isAuth, userController.unfollowUser);
-    //Regresa los followers de mi usuario
-    router.get('/user/me/followers', authMiddleware.isAuth, userController.getMyFollowers);
-    //Regresa a cuantos sigue mi usuario
-    router.get('/user/me/following', authMiddleware.isAuth, userController.getMyFollowing);
+  //Regresa los followers de mi usuario
+  router.get('/user/me/followers', authMiddleware.isAuth, userController.getMyFollowers);
+  //Regresa a cuantos sigue mi usuario
+  router.get('/user/me/following', authMiddleware.isAuth, userController.getMyFollowing);
   //Regresa los followers de un usuario
   router.get('/user/:username/followers', userController.getFollowers);
   //Regresa a cuantos sigue un usuario
   router.get('/user/:username/following', userController.getFollowing);
   //Obtiene tu propio usuario a traves del token
-  router.get('/user/me',authMiddleware.isAuth, userController.getMyUser);
+  router.get('/user/me', authMiddleware.isAuth, userController.getMyUser);
   router.get('/user/:username', userController.getUser);
 
   //Authorization =========================================================
@@ -61,8 +61,8 @@ module.exports = (() => {
   /**
    *@throws
    */
-   //Manejo de errores
-  router.use(function(err, req, res, next) {
+  //Manejo de errores
+  router.use(function (err, req, res, next) {
     if (err.name == 'movedPermanently') {
       errorHelper.permanentRedirect(err, req, res)
     } else if (err.name == 'seeOther') {
