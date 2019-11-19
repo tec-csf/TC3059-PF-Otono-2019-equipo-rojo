@@ -31,6 +31,13 @@
         profile_image_url: String,
     }
 
+### Post
+    `n:Post{
+        id: Integer, (Unique)
+        text: String
+        created_at: String,
+    }`
+
 ### Created
     `a:User1 -
     r:CREATED{
@@ -57,13 +64,6 @@
         created_at: String,
     }
     -> b:Post`
-
-### Post
-    `n:Post{
-        id: Integer, (Unique)
-        text: String
-        created_at: String,
-    }`
 
 ## Ejemplos Querys User
 ### Constrains para los usuarios

@@ -2,6 +2,7 @@
 
 ## NEO4J Cluster
 [Estrucura de la base de datos](./neo4j_doc.md)
+
 Este proyecto se ejecuta en un cluster de Neo4j docker con Helm
 
 ### Instalar Helm
