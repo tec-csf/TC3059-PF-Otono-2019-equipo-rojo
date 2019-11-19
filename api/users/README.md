@@ -329,10 +329,10 @@ Se debe crear el Dockerfile con su respectivo .dockerignore que incluya node_mod
 5. Correr el servidor
 
 ## Archivo *.env* (sin "")
-    PORT=<Puerto>
-    SECRET_KEY=<Llave privada>
+    PORT=<Puerto de la aplicación>
+    SECRET_KEY=<Llave privada *Para tokens, la misma siempre*>
 
-    NEO4J_HOST=<IP o dominio>
+    NEO4J_USER=<username *default:neo4j*>
     NEO4J_PASSWORD=<password>
 
     REDIS_HOST=<IP o dominio>
