@@ -41,6 +41,9 @@ R: pueba los siguientes comandos eh intenta de nuevo (`helm reset`) y (`helm ini
 - ¿Cómo puedo probar si funciona la base de datos?
 R: usa (`kubectl port-forward neo4j-cluster-neo4j-core-1 7474:7474 7687:7687`) para probar en [localhost:8474](http://localhost:8474)
 
+### More Neo4j structure info
+[Neo4j structure](./neo4j_doc.md)
+
 ## REDIS
 
 La solución propuesta para redis fue [Redis Labs](https://redislabs.com/)
