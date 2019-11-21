@@ -2,7 +2,7 @@
 'use strict';
 // Bases de datos =================================================
 const neo4j = require('neo4j-driver').v1;
-const driver = neo4j.driver('bolt://localhost', neo4j.auth.basic(process.env.NEO4J_HOST, process.env.NEO4J_PASSWORD));
+const driver = neo4j.driver('bolt://localhost', neo4j.auth.basic(process.env.NEO4J_USER, process.env.NEO4J_PASSWORD));
 const session = driver.session();
 const debug = require('debug')('dev'); //Herramienta para imprimir log en dev mode
 const authHelper = require('../helpers/auth.helper'); //Auth ayuda a gestionar Json Web Tokens (jwt)
@@ -10,7 +10,6 @@ const bcrypt = require('bcrypt'); //Libreria para encriptar las contraseñas de 
 const saltRounds = 13; //Numero de veces que se va a hashear la contraseña
 //const fetch = require("node-fetch");
 const redis = require('redis')
-
 // create and connect redis client to local instance.
 const client = redis.createClient({ host: process.env.REDIS_HOST, port: process.env.REDIS_PORT, password: process.env.REDIS_PASSWORD })
 // echo redis errors to the console
