@@ -5,8 +5,8 @@
 ##### Campus: CSF
 
 ##### Integrantes:
-1. Antony Adrian Morales Rosas
-2. *[Poner aquí Nombre y Apellidos del integrante 2]*
+1. Antony Adrian Morales Rosas A01019582
+2. Santa Esmeralda Magdaleno Morales A01023086
 
 ---
 ## 1. Aspectos generales
