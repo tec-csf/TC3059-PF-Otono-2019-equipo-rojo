@@ -9,10 +9,10 @@ RUN rm -rf /usr/share/nginx/html/*
 # install and cache app dependencies
 RUN npm install
 RUN npm install -g @angular/cli
-RUN npm build
+RUN ng build --prod --output-path=dist
 
 ## Copy over the artifacts in dist folder to default nginx public folder
-COPY /dist/frontend /usr/share/nginx/html
+COPY /dist /usr/share/nginx/html
 
 EXPOSE 80 443
 
