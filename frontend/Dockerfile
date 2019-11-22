@@ -12,11 +12,7 @@ RUN npm install -g @angular/cli
 RUN ng build --prod --output-path=dist
 
 ## Copy over the artifacts in dist folder to default nginx public folder
-<<<<<<< HEAD
-COPY --from=builder /ng-app/dist /usr/share/nginx/html
-=======
-COPY /dist /usr/share/nginx/html
->>>>>>> e3d6d46f988d847dbf6b156232d647bed0898289
+COPY dist/ /usr/share/nginx/html
 
 EXPOSE 80 443
 
