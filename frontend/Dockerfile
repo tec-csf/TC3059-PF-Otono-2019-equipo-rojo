@@ -12,7 +12,7 @@ RUN npm install -g @angular/cli
 RUN npm build
 
 ## Copy over the artifacts in dist folder to default nginx public folder
-COPY /dist/frontend /usr/share/nginx/html
+COPY ./dist/frontend /usr/share/nginx/html
 
 EXPOSE 80 443
 
