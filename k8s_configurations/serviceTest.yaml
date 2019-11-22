@@ -7,21 +7,21 @@ metadata:
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
-  - host: quiztar.me
+  - host: softlin.com.mx
     http:
       paths:
       - path: /
         backend:
           serviceName: frontend-service
           servicePort: 80
-  - host: api.quiztar.me
+  - host: api.softlin.com.mx
     http:
       paths:
       - path: /
         backend:
           serviceName: backend-user-service
           servicePort: 8000
-  - host: api2.quiztar.me
+  - host: api2.softlin.com.mx
     http:
       paths:
       - path: /
@@ -31,5 +31,5 @@ spec:
   tls:
   - secretName: frontend-tls
     hosts:
-    - quiztar.me
-    - api.quiztar.me
+    - softlin.com.mx
+    - api.softlin.com.mx
