@@ -7,21 +7,18 @@ metadata:
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
-  - host: quiztar.me
     http:
       paths:
       - path: /
         backend:
           serviceName: frontend-service
           servicePort: 80
-  - host: api.quiztar.me
     http:
       paths:
       - path: /
         backend:
           serviceName: backend-user-service
           servicePort: 8000
-  - host: api2.quiztar.me
     http:
       paths:
       - path: /

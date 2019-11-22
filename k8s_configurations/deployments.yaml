@@ -73,3 +73,47 @@ spec:
           ports:
             - containerPort: 8001
               protocol: TCP
+
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "dbs"
+  namespace: "default"
+  labels:
+    app: "dbs"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "dbs"
+  template:
+    metadata:
+      labels:
+        app: "dbs"
+    spec:
+      containers:
+      - name: "dbs-image"
+        image: "gcr.io/colibriapp/dbs-image:latest"
+      - name: "nginx"
+        image: "nginx:latest"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "dbs-hpa"
+  namespace: "default"
+  labels:
+    app: "dbs"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "dbs"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
