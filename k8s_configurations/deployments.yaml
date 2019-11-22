@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: gcr.io/colibriapp/front-image
+          image: gcr.io/colibriapp/front-image:latest
           ports:
             - containerPort: 80
               protocol: TCP
@@ -43,7 +43,7 @@ spec:
     spec:
       containers:
         - name: backend-user
-          image: gcr.io/colibriapp/api-users-image
+          image: gcr.io/colibriapp/api-users-image:latest
           ports:
             - containerPort: 8000
               protocol: TCP
@@ -69,7 +69,7 @@ spec:
     spec:
       containers:
         - name: backend-posts
-          image: gcr.io/colibriapp/api-posts-image
+          image: gcr.io/colibriapp/api-posts-image:latest
           ports:
             - containerPort: 8001
               protocol: TCP
