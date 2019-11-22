@@ -15,6 +15,7 @@ spec:
           serviceName: frontend-service
           servicePort: 80
   - host: api.softlin.com.mx
+
     http:
       paths:
       - path: /
