@@ -6,7 +6,7 @@ COPY default.conf /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
 
 ## Copy over the artifacts in dist folder to default nginx public folder
-COPY . /usr/share/nginx/html
+COPY /dist/frontend /usr/share/nginx/html
 
 EXPOSE 80 443
 

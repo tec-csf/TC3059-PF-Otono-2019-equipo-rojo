@@ -10,12 +10,11 @@ spec:
   - host: softlin.com.mx
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: frontend-service
           servicePort: 80
   - host: api.softlin.com.mx
-
     http:
       paths:
       - path: /
