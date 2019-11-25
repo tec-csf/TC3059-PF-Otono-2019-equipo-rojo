@@ -100,11 +100,23 @@ El Frontend fue desarrollado en Angular, esto porque necesitabamos una solución
 #### 3.4.2 Framework
 [Angular](https://github.com/angular/angular-cli). 
 #### 3.4.3 Librerías de funciones o dependencias
-[NodeJs](https://nodejs.org/es/)
+- [Angular 7](https://angular.io/docs)
+- [Neo4j-driver](https://neo4j.com/developer/javascript/) : Herramienta para poder comunicar nuestro código de javascript con una base de datos hosteada en neo4j. 
+- [kompose] (http://kompose.io/) : Herramienta para traducir los archivos de configuración de docker a archivos en kubernets. 
+- [redis] (https://redis.js.org/) : Herramienta para conectar nuestras aplicaciones de javascript con nuestra base de datos en redis.
+- [Pruebas de api con Postman](https://www.getpostman.com/)
 
 ### 3.5 API
 
-*[Incluya aquí una explicación de la solución utilizada para implementar la API del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
+Para poder crear una réplica de una red social, localizamos dos api que nos serían necesarios crear:
+
+- User: Este api se encargará de crear los endpoints para todas las funciones que el usuario pueda realizar dentro de la red social. Es decir, se encargará de las funciones de follow, like, create. 
+
+- Más información disponible en: [README_api_user](api/users/README.md)
+
+- Post: Este api se encargará de crear los endpoints necesarios para visualizar los posts.
+
+- Más información disponible en: [README_api_post (Deprecated)](api/posts/README.md)
 
 #### 3.5.1 Lenguaje de programación
 [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
@@ -118,17 +130,9 @@ Documentación Endpoints:
 [users](https://github.com/tec-csf/TC3059-PF-Otono-2019-equipo-rojo/tree/master/api/users)
 [posts](https://github.com/tec-csf/TC3059-PF-Otono-2019-equipo-rojo/tree/master/api/posts)
 
-* **Descripción**:
-* **URL**:
-* **Verbos HTTP**:
-* **Headers**:
-* **Formato JSON del cuerpo de la solicitud**: 
-* **Formato JSON de la respuesta**:
-
 
 ## 3.6 Pasos a seguir para utilizar el proyecto
 
-*[Incluya aquí una guía paso a paso para poder utilizar el proyecto, desde la clonación de este repositorio hasta el despliegue de la solución en una plataforma en la nube.]*
 
 ### Prerequisitos:
 
@@ -162,5 +166,15 @@ Una vez expuestos se crean automaticamente en la sección de Services & Ingress
 Se crea un Endpoint donde estan desplegados nuestros servicios
 
 ## 4. Referencias
-[Microservices Article](https://medium.com/codable/microservices-devops-experience-in-the-google-cloud-platform-2bb7527bc555)
+- [Microservices Article](https://medium.com/codable/microservices-devops-experience-in-the-google-cloud-platform-2bb7527bc555)
 
+- [Neo4j Considerations in Orchestration Environments](https://medium.com/neo4j/neo4j-considerations-in-orchestration-environments-584db747dca5)
+- [How we use Neo4J on our social network and workaround performance issues](https://blog.deimos.fr/2016/01/15/how-we-use-neo4j-on-our-social-network-and-workaround-performance-issues/)
+- [kubernets implementation](https://matthewpalmer.net/kubernetes-app-developer/articles/install-kubernetes-ubuntu-tutorial.html)
+- [Kubernetes information](https://stackify.com/kubernetes-docker-deployments/)
+- [Neo4j Cluster implementation](https://graphaware.com/neo4j/2018/01/03/casual-cluster-quickstart.html)
+- [Docker compose into kubernetes](http://kompose.io/getting-started/)
+- [Digital Ocean implementation](https://www.youtube.com/watch?v=DwlIn9zOcfc)
+- [Digital Ocean and kubernetes](https://www.digitalocean.com/docs/kubernetes/)
+- [Redis](https://medium.com/tech-tajawal/introduction-to-caching-redis-node-js-e477eb969eab)
+- [Host your application on Google Kubernetes Engine](https://medium.com/the-andela-way/how-to-host-an-application-on-gke-e95e7b1177eb) 
