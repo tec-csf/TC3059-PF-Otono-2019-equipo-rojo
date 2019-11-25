@@ -129,10 +129,10 @@ Documentación Endpoints:
 *[Incluya aquí una guía paso a paso para poder utilizar el proyecto, desde la clonación de este repositorio hasta el despliegue de la solución en una plataforma en la nube.]*
 
 Prerequisitos:
-```
+
 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
 [Cuenta de GCP](https://console.cloud.google.com)
-```
 Clonar el repositorio:
 
 ```
