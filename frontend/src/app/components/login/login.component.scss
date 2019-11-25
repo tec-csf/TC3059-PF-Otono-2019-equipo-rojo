@@ -496,13 +496,22 @@
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     width: 100%;
     display: table;
+
     .card-heading {
-      background-image: url(/assets/images/bg/bg_register.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-color: white;
       display: table-cell;
-      background-position: 70% 50%;
+      vertical-align: middle;
       width: 50%;
+
+      .card-heading-in{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      img{
+        width: 70%;
+      }
+      }
     }
     .card-body {
       padding: 57px 65px;
