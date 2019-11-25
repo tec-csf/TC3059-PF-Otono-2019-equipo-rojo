@@ -1,4 +1,4 @@
-# Hummingbird Cloud
+![Hummingbird App](./ColibriText.jpg)
 ---
 #### Materia: Desarrollo de Aplicaciones en la Nube
 
