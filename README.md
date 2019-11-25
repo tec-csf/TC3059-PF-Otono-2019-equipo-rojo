@@ -62,14 +62,24 @@ Este proyecto consiste en una red social con microblogging que permite a los usu
 A continuación aparecen descritos los diferentes elementos que forman parte de la solución del proyecto.
 
 ### 3.1 Arquitectura de la solución
-
+Diagrama de Arquitectura
 ![Diagrama de Arquitectura](/diagrama1.png)
 
-*[Incluya una explicación del flujo de la información entre los diferentes componentes.]*
+Diagrama del flujo del deployment
+![Diagrama Flujo del Deployment](/diagrama2.png)
 
 ### 3.2 Descripción de los componentes
+```
+Cloud Source Repositories: Used to link the git repository to the gcp console, in order to hace CI
+Cloud Build: Used to make build triggers for the Dockerfiles in the git repository 
+Container Registry: Make images built from the Cloud Build to create the following services:
+    -API Users: microservice for the management of the Users
+    -API Posts: microservice for the manegemnt of the Posts in the app
+    -Cluster Neo4j: microservice for the management of the database
+    -Frontend: microservice for the frontend application
+Kubernetes Engine: Used to manage the containers in a cluster, the deployment and the services.
 
-![Diagrama Flujo del Deployment](/diagrama2.png)
+```
 
 ### 3.3 Frontend
 
