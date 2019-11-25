@@ -55,7 +55,7 @@ Como parte de la entrega final del proyecto, se debe incluir la siguiente inform
 
 ## 2. Descripción del proyecto
 
-Este proyecto consiste en una red social con microblogging que permite a los usuarios realizar y recibir mensajes breves a través de la plataforma. Esta aplicación utilizará algunos servicios de GCP que se describirirán más adelante.
+Las redes sociales son una parte indispensable de nuestro día a día. Nos permiten una mayor facilidad y velocidad para interconectarnos con las personas. Sin embargo, suelen estar tan presentes en nuestra vida diaria que muchas veces pasamos por alto la complejidad que tiene por detrás. Por esto mismo, en este proyecto se pretende crear las bases de una Red social que ofrece un servicio de microblogging. Este permitirá a los usuarios realizar y recibir mensajes breves a tráves de la plataforma, algo similar a Twitter.
 
 ## 3. Solución
 
@@ -67,6 +67,7 @@ Diagrama de Arquitectura
 
 Diagrama del flujo del deployment
 ![Diagrama Flujo del Deployment](/diagrama2.png)
+
 
 ### 3.2 Descripción de los componentes
 ```
@@ -81,24 +82,25 @@ Kubernetes Engine: Used to manage the containers in a cluster, the deployment an
 
 ```
 
-### 3.3 Frontend
+### 3.3 Modelos de bases de datos utilizados
+Se utilizaron las siguientes bases de datos:
+
+- Neo4j: Al querer copiar una red social, haremos uso de neo4j dado que es una base de datos orientada a grafos. De esta manera podemos simular las relaciones entre las personas y los posts y facilitar el manejo de dichas conexiones. Además, es posible que las conexiones estén en constante movimiento, por lo que neo4j nos brindará una gran versatilidad en el manejo de la información. Además, es fácil de escalar y no disminuye su rendimiento a pesar de las cantidades enormes de nodos que puede almacenar,lo cual es extremadamente necesario para una red social.
+- Redis: Redis nos permite usar la memoria en caché. A la hora que nuestra aplicación comenzará a obtener las peticiones de los datos, se creará una llave única de redis. De esta manera, la próxima vez que se requiera hacer uso de la información, redis ya contendrá una referencia a los datos de neo4j, permitiendo que nuestra aplicación sea mucho más rápida.
+
+Más información disponible en: [README DBMS](./dbs/README.md)
+
+
+### 3.4 Frontend
 
 El Frontend fue desarrollado en Angular, esto porque necesitabamos una solución en la que pudieramos crear componentes que interactuen entre ellos.
 
-#### 3.3.1 Lenguaje de programación
-[Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
-#### 3.3.2 Framework
-[Angular](https://github.com/angular/angular-cli). 
-#### 3.3.3 Librerías de funciones o dependencias
-[NodeJs](https://nodejs.org/es/)
-
-### 3.4 Backend
-
-*[Incluya aquí una explicación de la solución utilizada para el backend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
-
 #### 3.4.1 Lenguaje de programación
+[Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
 #### 3.4.2 Framework
+[Angular](https://github.com/angular/angular-cli). 
 #### 3.4.3 Librerías de funciones o dependencias
+[NodeJs](https://nodejs.org/es/)
 
 ### 3.5 API
 
