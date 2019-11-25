@@ -63,13 +63,13 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 ### 3.1 Arquitectura de la solución
 
-![Diagrama de Arquitectura](Arquitectura Colibri-Architecture.png)
+![Diagrama de Arquitectura](/Arquitectura Colibri-Architecture.png)
 
 *[Incluya una explicación del flujo de la información entre los diferentes componentes.]*
 
 ### 3.2 Descripción de los componentes
 
-![Diagrama Flujo del Deployment](Arquitectura Colibri-Flujo Deployment.png)
+![Diagrama Flujo del Deployment](/Arquitectura Colibri-Flujo Deployment.png)
 
 ### 3.3 Frontend
 
