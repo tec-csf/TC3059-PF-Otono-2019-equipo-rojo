@@ -128,6 +128,35 @@ Documentación Endpoints:
 
 *[Incluya aquí una guía paso a paso para poder utilizar el proyecto, desde la clonación de este repositorio hasta el despliegue de la solución en una plataforma en la nube.]*
 
-## 4. Referencias
+Prerequisitos:
+-[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+-[Cuenta de GCP](https://console.cloud.google.com)
 
-*[Incluya aquí las referencias a sitios de interés, datasets y cualquier otra información que haya utilizado para realizar el proyecto y que le puedan ser de utilidad a otras personas que quieran usarlo como referencia]*
+Clonar el repositorio:
+
+```
+git clone [repository url]
+```
+Abrir la consola de GCP 
+
+Conectar el repositorio a Cloud Source Repositories
+[Getting started](https://cloud.google.com/source-repositories/docs/quickstart?hl=es&_ga=2.230610716.-1876654194.1573748571)
+
+Crear los triggers en Cloud Build añadiendo la ruta hacia el archivo Dockerfile que se quiere desplegar dentro del repositorio
+![Cloud Build](/CloudBuild.png)
+
+Crear un cluster en GKE (Google Kubernetes Engine)
+
+Ir a Container Registry y desplegar la imagen a GKE 
+![Cloud Build](/ContainerRegistry.png)
+
+Dentro de GKE es necesario exponer los Workloads para que puedan comuncarse entre ellos
+Una vez expuestos se crean automaticamente en la sección de Services & Ingress 
+
+![Cloud Build](/GKE.png)
+
+Se crea un Endpoint donde estan desplegados nuestros servicios
+
+## 4. Referencias
+[Microservices Article](https://medium.com/codable/microservices-devops-experience-in-the-google-cloud-platform-2bb7527bc555)
+
