@@ -55,7 +55,7 @@ Como parte de la entrega final del proyecto, se debe incluir la siguiente inform
 
 ## 2. Descripción del proyecto
 
-*[Incluya aquí la descripción del proyecto.]*
+Este proyecto consiste en una red social con microblogging que permite a los usuarios realizar y recibir mensajes breves a través de la plataforma. Esta aplicación utilizará algunos servicios de GCP que se describirirán más adelante.
 
 ## 3. Solución
 
@@ -63,21 +63,24 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 ### 3.1 Arquitectura de la solución
 
-*[Incluya aquí un diagrama donde se aprecie la arquitectura de la solución propuesta, así como la interacción entre los diferentes componentes de la misma.]*
+![Diagrama de Arquitectura](Arquitectura Colibri-Architecture.png)
 
 *[Incluya una explicación del flujo de la información entre los diferentes componentes.]*
 
 ### 3.2 Descripción de los componentes
 
-*[Incluya aquí una descripción detallada de cada uno de los componentes de la arquitectura así como una justificación de la selección de cada componente]*
+![Diagrama Flujo del Deployment](Arquitectura Colibri-Flujo Deployment.png)
 
 ### 3.3 Frontend
 
-*[Incluya aquí una explicación de la solución utilizada para el frontend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
+El Frontend fue desarrollado en Angular, esto porque necesitabamos una solución en la que pudieramos crear componentes que interactuen entre ellos.
 
 #### 3.3.1 Lenguaje de programación
+[Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
 #### 3.3.2 Framework
+[Angular](https://github.com/angular/angular-cli). 
 #### 3.3.3 Librerías de funciones o dependencias
+[NodeJs](https://nodejs.org/es/)
 
 ### 3.4 Backend
 
@@ -92,12 +95,16 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 *[Incluya aquí una explicación de la solución utilizada para implementar la API del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
 #### 3.5.1 Lenguaje de programación
+[Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
 #### 3.5.2 Framework
+[Express](https://expressjs.com/es/)
+[NodeJs](https://nodejs.org/es/)
+[Python Flask](http://flask.pocoo.org/)
 #### 3.5.3 Librerías de funciones o dependencias
 
-*[Incluya aquí una explicación de cada uno de los endpoints que forman parte de la API. Cada endpoint debe estar correctamente documentado.]*
-
-*[Por cada endpoint debe incluir lo siguiente:]*
+Documentación Endpoints:
+[users](https://github.com/tec-csf/TC3059-PF-Otono-2019-equipo-rojo/tree/master/api/users)
+[posts](https://github.com/tec-csf/TC3059-PF-Otono-2019-equipo-rojo/tree/master/api/posts)
 
 * **Descripción**:
 * **URL**:
